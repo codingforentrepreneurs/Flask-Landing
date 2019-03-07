@@ -3,7 +3,8 @@ from landing import app
 
 @app.route("/users/<username>/")
 def profile_detail(username):
-    return "<h1>Hello {username}</h1>".format(username=username)
+    context = {"user": username}
+    return render_template('profiles_detail.html', context=context, username=username, some_list=[12, 312, 12321])
 
 
 @app.route("/users/")
