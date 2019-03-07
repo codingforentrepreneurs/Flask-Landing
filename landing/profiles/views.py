@@ -8,4 +8,4 @@ def profile_detail(username):
 
 @app.route("/users/")
 def profiles_list():
-    return "<h1>Hello User</h1>"
+    return render_template('profiles_list.html')
