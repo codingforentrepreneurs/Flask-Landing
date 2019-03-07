@@ -1,9 +1,4 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-# url
-# view
+from landing import app
 
 @app.route("/")
 def hello():
@@ -20,12 +15,9 @@ def about_us():
 
 @app.route("/user/<username>/")
 def profile(username):
-
     return "<h1>Hello {username}</h1>".format(username=username)
 
 @app.route("/jobs/<job_id>/")
 def jobs(job_id):
     # run job 12
     return "<h1>Hello {username}</h1>".format(username=username)
-
-
