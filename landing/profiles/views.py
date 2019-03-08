@@ -2,7 +2,7 @@ from flask import render_template
 from landing import app
 
 @app.route("/users/<username>/")
-def profile_detail(username):
+def profiles_detail(username):
     context = {"user": username}
     if username == 'jmitchel3':
         context["right_user_msg"] = "Yeah that's right"
