@@ -1,27 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class='col-10 mx-auto'>
 <h1>Join us</h1>
 
 <form method='POST'>
     {{ form.csrf_token }}
-    <input type='text' name='full_name' placeholder='Your full name'/>
-    
-    {% if form.full_name.errors %}
-        {% for error in form.full_name.errors %}
-            <li>{{error}}</li>
-        {% endfor %}
-    {% endif %}
 
-    <input type='email' name='email' placeholder="winter@iscoming.com" />
-    {% if form.email.errors %}
-        {% for error in form.email.errors %}
-            <li>{{error}}</li>
-        {% endfor %}
-    {% endif %}
+    <div>
+        <label for='full_name'>{{ form.full_name.label }}</label>
+        {{ form.full_name }}
+        {% if form.full_name.errors %}
+            <div class='alert alert-danger'>
+                {% for error in form.full_name.errors %}
+                     <span class='mr-1'>{{error}}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+    <div>
+        <label for='email'>{{ form.email.label }}</label>
+        {{ form.email }}
+        {% if form.email.errors %}
+            <div class='alert alert-danger'>
+                {% for error in form.email.errors %}
+                    <span class='mr-1'>{{error}}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
 
     <input type='submit' value='Join' />
 
 </form>
+</div>
 
 {% endblock %}
