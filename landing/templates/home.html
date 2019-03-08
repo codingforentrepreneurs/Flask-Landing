@@ -6,7 +6,19 @@
 <form method='POST'>
     {{ form.csrf_token }}
     <input type='text' name='full_name' placeholder='Your full name'/>
+    
+    {% if form.full_name.errors %}
+        {% for error in form.full_name.errors %}
+            <li>{{error}}</li>
+        {% endfor %}
+    {% endif %}
+
     <input type='email' name='email' placeholder="winter@iscoming.com" />
+    {% if form.email.errors %}
+        {% for error in form.email.errors %}
+            <li>{{error}}</li>
+        {% endfor %}
+    {% endif %}
 
     <input type='submit' value='Join' />
 
