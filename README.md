@@ -1,4 +1,4 @@
-[![Flask Landing Project](https://static.codingforentrepreneurs.com/media/projects/flask-landing/images/share/Flask_Landing.jpg)
+[![Flask Landing Project](https://static.codingforentrepreneurs.com/media/projects/flask-landing/images/share/Flask_Landing.jpg)](https://www.codingforentrepreneurs.com/projects/flask-landing/)
 
 # Flask Landing
 Learn to build a landing page with the very popular Python Flask Microframework.
