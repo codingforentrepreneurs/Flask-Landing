@@ -38,3 +38,20 @@ This is what the code looks like at the end of the lesson. It's made for your re
 [15 - Landing Page Form](../../tree/d88a0cce5df34b566f1880db658f13386c326856/)
 
 [16 - POST Method and Request Data](../../tree/1989f28a78360583ef3b640c0dd867cff29fbff6/)
+
+[17 - Validation & CSRF](../../tree/3ecb4a0d2758c540f0b6b098067059adf0d0bb6e/)
+
+[18 - Python eval](../../tree/d7b13b28124af76148fa9342ef6114b68abec01e/)
+
+[19 - Adding CSRF Protection to Flask](../../tree/ff80d1549787d2a1f13661941e71ee15b46eb3c9/)
+
+[20 - A Form with Flask WTF](../../tree/7ee56db3e7633048cf5d0aa2520435e3a2d03ba1/)
+
+[21 - Basic Form Validation with wtforms](../../tree/f5bf3c1fbbf6a05897c309efe3e909d83307f1de/)
+
+[22 - Email & Custom Validation with wtforms](../../tree/028b783848ed6e8f108557e2162874dedc90d33a/)
+
+[23 - Render the Flask WTF Form in Template](../../tree/8de49fcad740e8c064e2d03b16b1c09ea5e3c672/)
+
+[24 - Input Class and Placeholder in Flask WTF Forms](../../tree/7b726a6020a6afd9665a3f664a1e9feca35de57c/)
+
