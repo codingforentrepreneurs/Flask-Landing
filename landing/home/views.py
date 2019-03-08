@@ -16,5 +16,6 @@ def home():
         print(data) 
         final_data = json.loads(data)
         print(final_data['hello'])
+        # eval() -> potentially harmful
 
     return render_template('home.html')
