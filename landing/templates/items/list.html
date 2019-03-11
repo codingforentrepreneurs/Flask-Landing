@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='col-10 mx-auto'>
+
+
+{% for instance in object_list %}    
+<p>{{ instance.id }} {{ instance.full_name }} {{ instance.email }}</p>
+{% endfor %}
+
+</div>
+
+{% endblock content %}

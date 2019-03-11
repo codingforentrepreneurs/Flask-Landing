@@ -35,6 +35,22 @@ ids == primary keys
 primary keys to lookup in database
 use dynamic url routing to lookup object in database
 '''
+@app.route("/items/", methods=['GET'])
+def item_list():
+    object_list = EmailSignup.query.all()
+    return render_template("items/list.html", object_list=object_list)
+
+
+@app.route("/item/", methods=['GET'])
+def item_list_redirect():
+    return redirect("/items/")
+
+
+@app.route("/items/<int:id>/", methods=['GET'])
+def item_detail_redirect(id):
+    return redirect("/item/{}/".format(id))
+
+
 
 @app.route("/item/<int:id>/", methods=['GET'])
 def item_detail(id):
