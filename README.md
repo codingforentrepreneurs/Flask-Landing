@@ -98,3 +98,7 @@ This is what the code looks like at the end of the lesson. It's made for your re
 [45 - Fresh Migrate and DB](../../tree/e52416b57d029d08cc093358a9278e39e6f99860/)
 
 [46 - Migrate Again](../../tree/da69781001544f584e5f154776280a20d35596f6/)
+
+[47 - Password Protect a View](../../tree/fa5dd457296e6867c11891bd9d27f8bcb214ff02)
+
+[48 - Prep Landing Page for Production](../../tree/4bbadfb22c79d715fd392eec1243068b709a029b)
