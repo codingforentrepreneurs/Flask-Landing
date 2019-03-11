@@ -1,5 +1,6 @@
 from landing import db
 
+from sqlalchemy import event
 
 class EmailSignup(db.Model):
     id          = db.Column(db.Integer, primary_key=True) # primary_key
@@ -35,6 +36,36 @@ class EmailSignup(db.Model):
         return False
 
 
-# id, full_name, email
-# 1, <>, <email>
-# 2, justin, hello@teamcfe.com
+
+
+
+# https://docs.sqlalchemy.org/en/latest/orm/events.html
+
+
+# before_insert 
+# after_insert
+
+# before_update
+# after_update
+
+# before_delete
+# after_delete
+
+@event.listens_for(EmailSignup, 'before_update')
+def email_signup_pre_update_signal(mapper, connection, target):
+    pass
+    # target = instance
+    # target.full_name = target.full_name + " working..."
+    # if target.slug is None:
+    #     target.slug = full_name.lower().replace(" ", "-")
+
+@event.listens_for(EmailSignup, 'after_update')
+def email_signup_post_update_signal(mapper, connection, target):
+    # target = instance
+    assert target.id is not None
+
+
+
+
+
+
