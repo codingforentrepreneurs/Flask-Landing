@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, validators, ValidationError, HiddenField
+from sqlalchemy import not_
 
 from .models import EmailSignup
 
@@ -24,11 +25,11 @@ class LandingForm(FlaskForm):
         ])
 
     def validate_email(self, field):
-        _id = self.data.get('id')
+        _id = self.data.get('id', -1) # -1 is not a valid id
         if field.data.endswith(".edu"):
             raise ValidationError('You cannot use a school email address.')
-        if _id is None:
-            obj = EmailSignup.query.filter_by(email=field.data).first()
-            if obj is not None:
-                msg = 'This email has already been added.'
-                raise ValidationError(msg)
+        not_query = not_(EmailSignup.id == _id)
+        obj = EmailSignup.query.filter_by(email=field.data).filter(not_query).first()
+        if obj is not None:
+            msg = 'This email has already been added.'
+            raise ValidationError(msg)
