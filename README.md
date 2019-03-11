@@ -67,4 +67,27 @@ This is what the code looks like at the end of the lesson. It's made for your re
 
 [30 - Convenience Methods for CRUD](../../tree/40bef5eed2c5f26597ab8d8cfc27ae222bf06ab1/)
 
+[31 - Saving Data to a Model via a Form](../../tree/67ff9521c1fa1b59f8ee24f187edf0eb93fca2f1/)
+
+[32 - Validation Form against Database with Model Lookup](../../tree/4b18028a0400202eda2348e1813e271ced21b0cd/)
+
+[33 - Database Object to Detail View](../../tree/66f835df39c0b1ce1c686ad4870262c7dc24f457/)
+
+[34 - First or 404](../../tree/6bd31ec341f0a393bd99b38b301ed50d459a584b/)
+
+[35 - Update View and Prefill Form Data](../../tree/be5f10208f1c570c76dedda7029c3069fc7b5e52/)
+
+[36 - Save Updates in Update View](../../tree/a4c49e8609a32912a1023228030fd7e6613c1ca2/)
+
+[37 - Exclude Items from SQLAlchemy Query](../../tree/3089738bc2bb51654544c18c4c564fba1d774999/)
+
+[38 - Delete & Confirm](../../tree/cfca3cae6dee29c28ea215a96a48cc0ca805befb/)
+
+[39 - List View and Redirects](../../tree/4facdfad3716f9cdb587fe3b0c98ea765c162b7d/)
+
+[40 - Navbar with Include](../../tree/a599b78bbec3f92e342c92fe77fc9c63d4c603ef/)
+
+[41 - Dynamic URL Paths with url_for](../../tree/670fd920a08d91c620d83715a33e45549482cb91/)
+
+[42 - url_for with Arguments](../../tree/dde3a97252e2cf9a9da421d3a445271f27d7de15/)
 
