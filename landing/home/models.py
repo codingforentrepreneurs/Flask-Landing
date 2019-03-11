@@ -1,3 +1,4 @@
+import datetime
 from landing import db
 
 from sqlalchemy import event
@@ -5,11 +6,10 @@ from sqlalchemy import event
 class EmailSignup(db.Model):
     id          = db.Column(db.Integer, primary_key=True) # primary_key
     full_name   = db.Column(db.String(120), nullable=True)
-    content     = db.Column(
-                    db.Text, 
-                    nullable=True
-                 )
     email       = db.Column(db.String(120), unique=True, nullable=False)
+    timestamp   = db.Column(db.DateTime, index=True, default=datetime.datetime.utcnow)
+    updated     = db.Column(db.DateTime, index=True, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
+    
 
     def save(self, commit=True):
         # create and update
