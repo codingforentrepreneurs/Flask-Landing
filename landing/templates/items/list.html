@@ -3,9 +3,31 @@
 {% block content %}
 <div class='col-10 mx-auto'>
 
+{% if form %}
+<form method='POST'>
+    {{ form.csrf_token }}
+
+    <div>
+        <label for='password'>{{ form.password.label }}</label>
+        {{ form.password }}
+        {% if form.password.errors %}
+            <div class='alert alert-danger'>
+                {% for error in form.password.errors %}
+                     <span class='mr-1'>{{error}}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+   
+    <button class='btn btn-primary my-3' type='submit'>Continue</button>
+
+</form>
+{% endif %}
+
 
 {% for instance in object_list %}    
-<p><a href="{{ url_for('item_detail', id=instance.id) }}">{{ instance.full_name }} {{ instance.email }}</a></p>
+<p>{{ instance.id }}, {{ instance.full_name }} {{ instance.email }} {{ instance.timestamp }}</p>
 {% endfor %}
 
 </div>

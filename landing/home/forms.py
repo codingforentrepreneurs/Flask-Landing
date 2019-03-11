@@ -1,8 +1,20 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, ValidationError, HiddenField
+from wtforms import StringField, PasswordField, validators, ValidationError, HiddenField
 from sqlalchemy import not_
 
 from .models import EmailSignup
+
+class ViewItemsForm(FlaskForm):
+    password = PasswordField('Password', validators=[
+            validators.DataRequired(
+                    message='You full name is required'
+            )
+        ])
+
+    def validate_password(self, field):
+        if field.data != 'fb03d3c9-06c8-4c30-8a12-08f5df1688f5':
+            raise ValidationError("You do not have permission to view this.")
+
 
 class LandingForm(FlaskForm):
     id = HiddenField('id')
