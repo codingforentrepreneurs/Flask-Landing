@@ -7,6 +7,7 @@ class EmailSignup(db.Model):
     email       = db.Column(db.String(120), unique=True, nullable=False)
 
     def save(self, commit=True):
+        # create and update
         if commit:
             instance = self
             if not instance.id:
@@ -21,6 +22,7 @@ class EmailSignup(db.Model):
         return False
 
     def delete(self, commit=True):
+        # delete
         if self.id:
             db.session.delete(self)
             try:
