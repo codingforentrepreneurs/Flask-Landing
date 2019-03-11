@@ -44,6 +44,31 @@ def item_detail(id):
     return render_template('items/detail.html', instance=instance)
 
 
+@app.route("/item/<int:id>/update/", methods=['GET', 'POST'])
+def item_update(id):
+    # instance = EmailSignup.query.get(id)
+    instance = EmailSignup.query.filter_by(id=id).first_or_404()
+    # instance.full_name -> form.full_name
+    # instance.email -> form.email
+    form = LandingForm(obj=instance)
+    if form.validate_on_submit():
+        data = form.data
+        print(data)
+    return render_template('items/form.html', instance=instance, form=form)
+
+
+
+
+@app.route("/item/<int:id>/update/", methods=['GET', 'POST'])
+def item_delete(id):
+    # instance = EmailSignup.query.get(id)
+    instance = EmailSignup.query.filter_by(id=id).first_or_404()
+    # form
+    return render_template('items/detail.html', instance=instance)
+
+
+
+
 
 
 
