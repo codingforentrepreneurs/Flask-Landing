@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a93f2b14f93befd2d0b0aebc22883a657d077d95c1041943c655b95ebe78f518"
+            "sha256": "98384c57b7e8ab9d585ee7237ec1e66fd24722a547642e2615ca4c657625c9de"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,12 @@
         ]
     },
     "default": {
+        "alembic": {
+            "hashes": [
+                "sha256:505d41e01dc0c9e6d85c116d0d35dbb0a833dcb490bf483b75abeb06648864e8"
+            ],
+            "version": "==1.0.8"
+        },
         "click": {
             "hashes": [
                 "sha256:2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13",
@@ -30,6 +36,14 @@
             ],
             "index": "pypi",
             "version": "==1.0.2"
+        },
+        "flask-migrate": {
+            "hashes": [
+                "sha256:a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c",
+                "sha256:c24d105c5d6cc670de20f8cbfb909e04f4e04b8784d0df070005944de1f21549"
+            ],
+            "index": "pypi",
+            "version": "==2.4.0"
         },
         "flask-sqlalchemy": {
             "hashes": [
@@ -52,6 +66,12 @@
                 "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
             ],
             "version": "==2.10"
+        },
+        "mako": {
+            "hashes": [
+                "sha256:4e02fde57bd4abb5ec400181e4c314f56ac3e49ba4fb8b0d50bba18cb27d25ae"
+            ],
+            "version": "==1.0.7"
         },
         "markupsafe": {
             "hashes": [
@@ -85,6 +105,28 @@
                 "sha256:e249096428b3ae81b08327a63a485ad0878de3fb939049038579ac0ef61e17e7"
             ],
             "version": "==1.1.1"
+        },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb",
+                "sha256:c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e"
+            ],
+            "version": "==2.8.0"
+        },
+        "python-editor": {
+            "hashes": [
+                "sha256:1bf6e860a8ad52a14c3ee1252d5dc25b2030618ed80c022598f00176adc8367d",
+                "sha256:51fda6bcc5ddbbb7063b2af7509e43bd84bfc32a4ff71349ec7847713882327b",
+                "sha256:5f98b069316ea1c2ed3f67e7f5df6c0d8f10b689964a4a811ff64f0106819ec8"
+            ],
+            "version": "==1.0.4"
+        },
+        "six": {
+            "hashes": [
+                "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
+                "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+            ],
+            "version": "==1.12.0"
         },
         "sqlalchemy": {
             "hashes": [

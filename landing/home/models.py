@@ -5,6 +5,10 @@ from sqlalchemy import event
 class EmailSignup(db.Model):
     id          = db.Column(db.Integer, primary_key=True) # primary_key
     full_name   = db.Column(db.String(120), nullable=True)
+    content     = db.Column(
+                    db.Text, 
+                    nullable=True
+                 )
     email       = db.Column(db.String(120), unique=True, nullable=False)
 
     def save(self, commit=True):
