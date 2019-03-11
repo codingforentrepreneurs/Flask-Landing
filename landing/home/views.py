@@ -1,5 +1,5 @@
 import json
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, url_for
 from landing import app
 
 from .forms import LandingForm
@@ -35,7 +35,7 @@ ids == primary keys
 primary keys to lookup in database
 use dynamic url routing to lookup object in database
 '''
-@app.route("/items/", methods=['GET'])
+@app.route("/item/", methods=['GET'])
 def item_list():
     object_list = EmailSignup.query.all()
     return render_template("items/list.html", object_list=object_list)
@@ -43,7 +43,8 @@ def item_list():
 
 @app.route("/item/", methods=['GET'])
 def item_list_redirect():
-    return redirect("/items/")
+    redirect_url = url_for('item_list')
+    return redirect(redirect_url)
 
 
 @app.route("/items/<int:id>/", methods=['GET'])
