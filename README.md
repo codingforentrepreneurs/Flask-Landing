@@ -91,3 +91,10 @@ This is what the code looks like at the end of the lesson. It's made for your re
 
 [42 - url_for with Arguments](../../tree/dde3a97252e2cf9a9da421d3a445271f27d7de15/)
 
+[43 - Signals](../../tree/83c9e403f648f6d9802efbef098c93aa09e15ffa/)
+
+[44 - Change Models with Flask Migrate](../../tree/1855bfed2d305b5a04d22cf3e6fb690da75a14f4/)
+
+[45 - Fresh Migrate and DB](../../tree/e52416b57d029d08cc093358a9278e39e6f99860/)
+
+[46 - Migrate Again](../../tree/da69781001544f584e5f154776280a20d35596f6/)
