@@ -18,8 +18,9 @@ def home():
             obj = EmailSignup(**data) #(full_name=, email=)
             obj.save()
         #form = LandingForm()
-        #return render_template('home.html', form=form)
-        return redirect("/item/{}".format(obj.id))
+        #return render_template('home.html', form=form)\
+        redirect_url = url_for('item_detail', id=obj.id)
+        return redirect(redirect_url)
         # send email -> via flask and smtp
         # create txt doc
         # create csv doc
@@ -49,7 +50,8 @@ def item_list_redirect():
 
 @app.route("/items/<int:id>/", methods=['GET'])
 def item_detail_redirect(id):
-    return redirect("/item/{}/".format(id))
+    redirect_url = url_for('item_detail', id=id)
+    return redirect(redirect_url)
 
 
 
@@ -73,7 +75,8 @@ def item_update(id):
         instance.full_name = full_name
         instance.email = email
         instance.save()
-        return redirect("/item/{}/".format(instance.id))
+        redirect_url = url_for('item_detail', id=instance.id)
+        return redirect(redirect_url)
     return render_template('items/form.html', instance=instance, form=form)
 
 
