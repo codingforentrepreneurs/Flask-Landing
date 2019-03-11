@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class='col-10 mx-auto'>
-<h1>Join us</h1>
+<div class='col-10 mx-auto text-center'>
+    <h1>Join us</h1>
+    <img src='https://camo.githubusercontent.com/fec21a6a240d7d68ebb83edc057375f6be71dced/68747470733a2f2f7374617469632e636f64696e67666f72656e7472657072656e657572732e636f6d2f6d656469612f70726f6a656374732f666c61736b2d6c616e64696e672f696d616765732f73686172652f466c61736b5f4c616e64696e672e6a7067' class='img-fluid' alt='Flask Landing Project' />
 
-<form method='POST'>
+<div class='col-md-4 col-12 mx-auto my-3'>
+<form class='form' method='POST'>
     {{ form.csrf_token }}
 
-    <div>
+    <div  class="form-group">
         <label for='full_name'>{{ form.full_name.label }}</label>
         {{ form.full_name }}
         {% if form.full_name.errors %}
@@ -19,7 +21,7 @@
         {% endif %}
     </div>
 
-    <div>
+    <div  class="form-group">
         <label for='email'>{{ form.email.label }}</label>
         {{ form.email }}
         {% if form.email.errors %}
@@ -34,6 +36,7 @@
     <button class='btn btn-primary my-3' type='submit'>Join and Continue</button>
 
 </form>
+</div>
 </div>
 
 {% endblock %}
