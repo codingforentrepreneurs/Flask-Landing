@@ -9,11 +9,10 @@ from .models import EmailSignup
 def home():
     form = LandingForm()
     if form.validate_on_submit():
-        # print(form.full_name.data)
-        # print(form.email.data)
-        data = form.data
-        if 'csrf_token' in data:
-            del data['csrf_token']
+        data = {
+            "full_name": form.full_name.data,
+            "email": form.email.data
+        }
         obj = EmailSignup.query.filter_by(email=form.email.data).first()
         if obj is None:
             obj = EmailSignup(**data) #(full_name=, email=)
@@ -52,8 +51,12 @@ def item_update(id):
     # instance.email -> form.email
     form = LandingForm(obj=instance)
     if form.validate_on_submit():
-        data = form.data
-        print(data)
+        full_name   = form.full_name.data
+        email       = form.email.data
+        instance.full_name = full_name
+        instance.email = email
+        instance.save()
+        return redirect("/item/{}/".format(instance.id))
     return render_template('items/form.html', instance=instance, form=form)
 
 

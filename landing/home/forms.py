@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, ValidationError
+from wtforms import StringField, validators, ValidationError, HiddenField
 
 from .models import EmailSignup
 
 class LandingForm(FlaskForm):
+    id = HiddenField('id')
     full_name = StringField('Full name', 
         render_kw={"class": "form-control", 
             "placeholder": "Full name"},
@@ -23,9 +24,11 @@ class LandingForm(FlaskForm):
         ])
 
     def validate_email(self, field):
+        _id = self.data.get('id')
         if field.data.endswith(".edu"):
             raise ValidationError('You cannot use a school email address.')
-        obj = EmailSignup.query.filter_by(email=field.data).first()
-        if obj is not None:
-            msg = 'This email has already been added.'
-            raise ValidationError(msg)
+        if _id is None:
+            obj = EmailSignup.query.filter_by(email=field.data).first()
+            if obj is not None:
+                msg = 'This email has already been added.'
+                raise ValidationError(msg)
