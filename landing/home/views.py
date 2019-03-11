@@ -14,8 +14,12 @@ def home():
         data = form.data
         if 'csrf_token' in data:
             del data['csrf_token']
-        obj = EmailSignup(**data) #(full_name=, email=)
-        obj.save()
+        obj = EmailSignup.query.filter_by(email=form.email.data).first()
+        if obj is None:
+            obj = EmailSignup(**data) #(full_name=, email=)
+            obj.save()
+        form = LandingForm()
+        return render_template('home.html', form=form)
         # send email -> via flask and smtp
         # create txt doc
         # create csv doc
