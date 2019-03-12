@@ -11,6 +11,7 @@ sqlalchemy = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 gunicorn = "*"
+flask-wtf = "*"
 
 [requires]
 python_version = "3.6"
