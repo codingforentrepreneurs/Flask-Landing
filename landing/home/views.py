@@ -43,7 +43,10 @@ def item_list():
         return render_template("items/list.html", form=None, object_list=object_list)
     return render_template("items/list.html", form=form, object_list=[])
     
-
+@app.route("/success/", methods=['GET'])
+def success_view():
+    return render_template("success.html")
+    
 
 # @app.route("/item/", methods=['GET'])
 # def item_list_redirect():
