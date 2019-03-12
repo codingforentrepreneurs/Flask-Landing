@@ -12,7 +12,7 @@ class ViewItemsForm(FlaskForm):
         ])
 
     def validate_password(self, field):
-        if field.data != 'fb03d3c9-06c8-4c30-8a12-08f5df1688f5':
+        if field.data != 'e3@#@#3c9-06c8-4c30-8a12-08fDFA:1688f5':
             raise ValidationError("You do not have permission to view this.")
 
 
