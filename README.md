@@ -108,3 +108,17 @@ This is what the code looks like at the end of the lesson. It's made for your re
 [50 - Heroku and Live App](../../tree/0abc3be684d974e7a94e07944ae57cbee0d64f20)
 
 [51 - Making Changes for Production](../../tree/4e86345148d84b0ea4513a67be2575bc7d85325f)
+
+52 - Custom Domain
+```console
+heroku domains:add
+```
+
+53 - Adding HTTPs using [ACM](https://devcenter.heroku.com/articles/automated-certificate-management)
+```console
+heroku ps:resize web=hobby
+
+heroku certs:auto:enable
+```
+
+[54 - Suggested Next Steps](../../tree/45d1da542aeea47e8554df306747d844a2a42279)
