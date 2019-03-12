@@ -102,3 +102,9 @@ This is what the code looks like at the end of the lesson. It's made for your re
 [47 - Password Protect a View](../../tree/fa5dd457296e6867c11891bd9d27f8bcb214ff02)
 
 [48 - Prep Landing Page for Production](../../tree/4bbadfb22c79d715fd392eec1243068b709a029b)
+
+[49 - Gunicorn Server](../../tree/02172e4ca126acf87e3454d5260ce9df8c125a3f)
+
+[50 - Heroku and Live App](../../tree/0abc3be684d974e7a94e07944ae57cbee0d64f20)
+
+[51 - Making Changes for Production](../../tree/4e86345148d84b0ea4513a67be2575bc7d85325f)
