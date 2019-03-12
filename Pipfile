@@ -10,6 +10,7 @@ flask = "==1.0.2"
 sqlalchemy = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
